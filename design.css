@@ -18,6 +18,13 @@
 .home_logo img {
   margin: 0 !important;
 }
+@media screen and (max-width: 769px) {
+.home_logo img {
+  width: 68% !important;
+  height: auto !important;
+  margin: -10px 0!important;
+}
+}
 
 /**
  * Navigation
@@ -108,11 +115,43 @@
   background-color: rgba(248, 248, 248, 1);
   transform-origin: left center;
 }
+[local-style="32200464"] .page_heading::before {
+  background-color: rgba(94, 136, 162, 1);
+}
+[local-style="32171994"] .page_heading {
+  padding: 2rem;
+  margin-left: 0 !important; 
+}
+.about_gap {
+  color: rgba(94, 136, 162, 1);
+    letter-spacing: -0.17em;
+}
+@media screen and (max-width: 1200px) {
+.page_heading img {
+  width: 16vw !important;
+  height: auto !important;
+}
+}
 @media screen and (max-width: 769px) {
 .page_heading {
   margin-left: 0 !important;
 }
+ .page_heading img{
+  width: 23vw !important;
+  height: auto !important;
 }
+}
+
+/**
+ * About
+ */
+[local-style="32200464"] .page_heading img {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 !important;
+  pointer-events: none;
+}
+
 
 /**
  * Find us
@@ -171,6 +210,11 @@
   margin-top: -31px;
 }
 }
+
+/*
+ * –------------- *
+ */
+
 
 /**
  * Content
@@ -532,7 +576,6 @@ body.mobile #site_menu .close {
   width: 40px;
   height: auto;
 }
-
 body.mobile #shop_button:not(.text) {
   margin: -6px;
   font-size: 40px;
@@ -630,7 +673,6 @@ body.mobile .quick-view {
   background: rgba(0,0,0,0.5);
   color: white;
 }
-
 
 /**
  * Quick View Navigation 
