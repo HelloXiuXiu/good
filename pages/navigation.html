@@ -3,18 +3,19 @@
 </style>
 
 <h2 class="nav" id="#site_menu">
-<div class="page-link" data-link-pid="32148454" data-prevtype="">
+<div class="page-link animate_load" data-link-pid="32148454" data-prevtype="">
   <a href="About" rel="history">this is {image 1 scale="11"}</a>
 </div>
-<div class="page-link" data-link-pid="32171994" data-prevtype="">
+<div class="page-link animate_load" data-link-pid="32171994" data-prevtype="">
   <a href="Work" rel="history">the work</a>
 </div>
-<div class="page-link" data-link-pid="32171994" data-prevtype="">
+<div class="page-link animate_load" data-link-pid="32171994" data-prevtype="">
   <a href="Find-us" rel="history">find us</a>
 </div>
 </h2>
 <div class="close">︎</div>
-<br><br><br><br>
+<a class="back_home image-link" href="#" rel="home_page">{image 1 scale="5"}</a>
+<br><br>
 <script>
 Cargo.Helper.IsOnHomepage() && $('[rel="home_page"]', this.el).addClass("active");
 var t = Cargo.Helper.GetCurrentProjectUrl();
