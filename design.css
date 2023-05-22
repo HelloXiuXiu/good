@@ -125,6 +125,7 @@
 /**
  * Pages
  */
+.project_heading,
 .page_heading {
   position: relative;
   display: inline-block;
@@ -132,12 +133,17 @@
   margin-bottom: 55px !important;
   margin-left: -2% !important;
 }
+.project_heading {
+  margin-left:unset !important;
+}
+.project_heading {
+  font-size: 5vw !important;
+}
+.project_heading::before,
 .page_heading::before {
   content: '';
   position: absolute;
-  top: 57%;
   left: calc(-3rem - 2%);
-  width: 140%;
   height: 2px;
   background-color: rgba(248, 248, 248, 1);
   transform-origin: left center;
@@ -146,12 +152,29 @@
   animation-fill-mode: forwards;
   animation-name: lines_load;
 }
+.page_heading::before {
+  top: 57%;
+  width: 140%;
+}
+.project_heading::before {
+  bottom: -13%;
+  width: 60vw;
+}
 [local-style="32200464"] .page_heading::before {
   background-color: rgba(94, 136, 162, 1);
 }
 [local-style="32171994"] .page_heading {
   padding: 2rem;
   margin-left: 0 !important; 
+}
+.project_heading + div > div *{
+  margin-bottom: 20px;
+}
+.project_heading + div > div *{
+  margin-top: -0.2rem;
+}
+.project {
+  margin: 60px 0 !important;
 }
 @media screen and (max-width: 1200px) {
 .page_heading img {
@@ -160,12 +183,19 @@
 }
 }
 @media screen and (max-width: 769px) {
+.project_heading,
 .page_heading {
   margin-left: 0 !important;
 }
- .page_heading img{
+.page_heading img{
   width: 23vw !important;
   height: auto !important;
+}
+.project_heading::before {
+  width: 160%;
+}
+.project {
+  margin-top: 0px !important;
 }
 }
 
@@ -320,6 +350,9 @@
   opacity: 1;
   margin-top: -8%;
   opacity: 1;
+}
+[local-style="32182639"] small {
+  font-size: 21px !important;
 }
 }
 @media screen and (max-width: 769px) {
@@ -498,8 +531,8 @@ bodycopy a.icon-link:hover {
 }
 [data-predefined-style="true"] small {
   display: inline-block;
-  font-size: 1.4vw;
-  line-height: 1.3;
+  font-size: 2.4vw;
+  line-height: 1.1;
   font-family: "Space Grotesk", Icons;
   font-style: normal;
   font-weight: 400;
@@ -512,16 +545,22 @@ bodycopy a.icon-link:hover {
 bodycopy {
   font-size: 18px !important;
 }
-small {
-  font-size: 21px !important;
-}
 h2 {
   font-size: 8vw !important;
+}
+small {
+  font-size: 2.5vw !important;
 }
 }
 @media screen and (max-width: 769px) {
 h2 {
   font-size: 12vw !important;
+}
+h2.project_heading {
+  font-size: 10vw !important;
+}
+small {
+  font-size: 30px !important;
 }
 }
 
@@ -529,7 +568,7 @@ h2 {
  * Breakpoints
  */
 [data-css-preset] .page {
-  background-color: initial /*!page_bgcolor*/;
+  background-color: initial;
 }
 .mobile .page,
 [data-css-preset].mobile .page {
@@ -537,18 +576,18 @@ h2 {
   min-height: 10px;
   max-width: 100%;
   width: 100%;
-  background-color: transparent /*!page_bgcolor*/;
+  background-color: transparent;
 }
 [data-css-preset] .container {
-  margin-left: auto /*!content_center*/;
-  margin-right: auto /*!content_center*/;
-  text-align: left /*!text_left*/;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 [data-css-preset] body {
-  background-color: #021b2c/*!body_bgcolor*/;
+  background-color: #021b2c;
 }
 [data-css-preset] .container_width {
-  width: 90%/*!content_center*/;
+  width: 90%;
 }
 [data-css-preset] .content_padding {
   padding-top: 2.7rem;
