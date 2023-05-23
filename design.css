@@ -167,7 +167,9 @@
   padding: 2rem;
   margin-left: 0 !important; 
 }
-
+.project_heading + div {
+align-items: flex-end !important; 
+}
 .project_heading + div > div *{
   margin-top: -0.2rem;
 }
@@ -429,6 +431,7 @@
 .animate_load:nth-child(3) {
   animation-delay: 0.6s;
 }
+
 
 /*
  * –------------- *
