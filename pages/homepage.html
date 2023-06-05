@@ -1,6 +1,55 @@
-<h1>this is <a href="#" rel="site_menu" class="image-link home_logo logo_load">{image 3 scale="27"}</a> for you</h1>
+<h1 class="home_text">
+<span>t</span><span>h</span><span>i</span><span>s</span>&nbsp;<span>i</span><span>s</span>
+<a href="#" rel="site_menu" class="image-link home_logo logo_load">{image 3 scale="27"}</a>
+<span>f</span><span>o</span><span>r</span> 
+<span>y</span><span>o</span><span>u</span>
+</h1>
+
 
 <style>
 [local-style="32170878"] { opacity: 0; pointer-events: none; }
 #site_menu_button { opacity: 0; pointer-events: none; }
 </style>
+
+<script>
+addEventListener("load", () => {
+function HomeAnim() {
+let box = document.querySelector(".home_text");
+let letters = document.querySelectorAll(".home_text span");
+let good = document.querySelector(".home_text img");
+
+let delays = [];
+let delay = 2;
+
+let d = 0;
+for (let i=0; i<letters.length; i++) {
+  delays.push(Math.floor(d)/10);
+  d += delay;
+}
+
+function shuffle(array) {
+  let currentIndex = array.length, randomIndex;
+
+  while (currentIndex != 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+  return array;
+}
+shuffle(delays);
+
+for(let i=0; i<letters.length; i++)  {
+  letters[i].style.animationDelay = delays[i] + "s";
+}
+setTimeout(() => {
+ for (let i=0; i<letters.length; i++) {
+  letters[i].style.color = "rgba(255, 255, 255, 0)";
+ }
+}, "4000");
+}
+HomeAnim();
+addEventListener("popstate", HomeAnim);
+});
+</script>
