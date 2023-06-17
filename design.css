@@ -1,3 +1,6 @@
+:root {
+  background-color: #0f0e0e;
+}
 /**
  * Video pair
  */
@@ -20,10 +23,26 @@
   border-bottom: 2px solid #F8F8F8;
   z-index: 200 !important;
 }
+.marquee_gap { 
+  letter-spacing: -0.17em;
+}
 
 /**
  * Homepage
  */
+.clock_wrap {
+  position: absolute;
+  font-size: 1.8vw;
+  bottom: 6px;
+  right: 36%;
+  display: inline-block;
+}
+.clock_wrap div { 
+  display: inline;
+}
+.home_text {
+  position: relative;
+}
 .home_logo {
   display: inline-block;
   vertical-align: middle;
@@ -53,6 +72,13 @@
   width: 68% !important;
   height: auto !important;
   margin: -10px 0!important;
+}
+.clock_wrap {
+  position: fixed;
+  font-size: 5.5vw;
+  bottom: 20px;
+  right: 50%;
+  transform: translateX(55%) !important;
 }
 }
 
@@ -183,12 +209,17 @@
   padding-top: 0;
 }
 .project_heading + div small {
-  font-size: 1.6vw !important;
+  font-size: 1.2vw !important;
   line-height: 1.2 !important;
+  padding-right: 25%;
 }
 @media screen and (max-width: 1200px) {
 .project_heading + div small {
-  font-size: 1.8vw !important;
+  font-size: 1.4vw !important;
+}
+.project_heading,
+.page_heading {
+  margin-bottom: 60px !important;
 }
 }
 @media screen and (max-width: 769px) {
@@ -205,10 +236,10 @@
 }
 .page_heading {
   margin-left: 0 !important;
-  margin-bottom: 30px !important;
 }
 .project_heading + div small {
-  font-size: 17px !important;
+  font-size: 14px !important;
+  padding-right: unset;
 }
 }
 
@@ -346,10 +377,10 @@
 .contact_wrap:hover img {
   opacity: 1;
 }
-.contact_wrap small span {
+.contact_wrap div span {
   position: relative; 
 }
-.contact_wrap small span::before {
+.contact_wrap div span::before {
   content: '';
   width: 187%;
   height: 1.5px;
@@ -361,18 +392,18 @@
   transform-origin: center left;
   transition: transform 0.5s !important;
 }
-.contact_wrap:hover small span::before {
+.contact_wrap:hover div span::before {
   transform: scaleX(1);
 }
 @media screen and (max-width: 1200px) {
 .contact_wrap img {
   position: relative;
   display: block;
-  width: 10vw !important;
+  width: 11vw !important;
   top: unset;
-  left: -24%;
+  left: -27%;
   opacity: 1;
-  margin-top: -8%;
+  margin-top: -11%;
   opacity: 1;
 }
 [local-style="32182639"] small {
@@ -530,7 +561,7 @@ hr {
  * Font Styles
  */
 [data-predefined-style="true"] bodycopy {
-  font-size: 1.5vw;
+  font-size: 1.4vw;
   font-weight: 400;
   color: rgb(255, 255, 255);
   font-family: "Space Grotesk", Icons;
@@ -696,7 +727,6 @@ div[thumbnails] {
   height: 100%;
   margin: 0 !important;
   font-family: "Space Grotesk", Icons;
-  text-transform: lowercase;
   letter-spacing: 0.2em;
   font-weight: 600;
   font-size: 2vw;
